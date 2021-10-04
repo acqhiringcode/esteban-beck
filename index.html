@@ -123,16 +123,16 @@
                         <h2 class='categorias__title'>Elige, paga y recibe tu pedido sin moverte de tu casa.</h2>
                         <ul class='categorias__navigation'>
                             <li class='categorias__item'>
-                                <a href="" class='categorias__link'>Todos</a>
+                                <a href="" class='categorias__link' data-category='todos'>Todos</a>
                             </li>
                             <li class='categorias__item'>
-                                <a href="" class='categorias__link'>Bolsas</a>
+                                <a href="" class='categorias__link' data-category='bolsas'>Bolsas</a>
                             </li>
                             <li class='categorias__item'>
-                                <a href="" class='categorias__link'>Stickers</a>
+                                <a href="" class='categorias__link' data-category='stickers'>Stickers</a>
                             </li>
                             <li class='categorias__item'>
-                                <a href="" class='categorias__link'>Paquetes</a>
+                                <a href="" class='categorias__link' data-category='paquetes'>Paquetes</a>
                             </li>
                         </ul>
                     </div>
@@ -192,18 +192,19 @@
 
         window.addEventListener('DOMContentLoaded', (event) => {
 
-            const productos = [{ titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg" }];
+            const productos = [{ titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'bolsas' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'stickers' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'paquetes' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'paquetes' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'bolsas' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'stickers' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'bolsas' }, { titulo: "Bolsa de papel 30x12x41", unidades: "100 unidades", precio: "4100$", imagen: "imgs/item.jpg", categoria: 'paquetes' }];
             
             let getProducts = () => {
 
                 return productos;
             }
+            
             let renderProductos = productos => {
                 let template_product = '';
                 
                 for (let producto of Array.from(productos)) {
                     template_product += `
-                    <article class='item-categorias'>
+                    <article class='item-categorias' data-producto='${producto.categoria}'>
                         <figure class='item-categorias__figure'>
                             <img src="${producto.imagen}" alt="" class='item-categorias__image'>
                             <figcaption class='item-categorias__figcaption'>
@@ -217,12 +218,34 @@
                 return template_product;
                
             }
-            (function controllerProducts() {
+            
+            function controllerProducts() {
                 let productos = getProducts();
                 let template = renderProductos(productos);
                 let category_boxes = document.querySelector('.categorias__boxes');
                 category_boxes.insertAdjacentHTML('afterbegin', template);
-            })();
+            }
+            controllerProducts();
+
+            let bttnCategory = document.querySelectorAll('[data-category]');
+            
+            // bttnCategory.forEach( bttn => {
+            //     bttn.addEventListener( 'click', (e) => {
+            //         e.preventDefault();
+            //         let categoryBttn = bttn.dataset.category;
+            //         controllerProducts();
+            //         filterProductos(categoryBttn);
+            //     });
+            // });
+            function filterProductos(categoryBttn) {
+                let productos = document.querySelectorAll('[data-producto]');
+                productos.forEach( producto => {
+                    console.log(producto.dataset.producto !== categoryBttn);
+                    if(producto.dataset.producto !== categoryBttn) {
+                        producto.remove();
+                    }
+                });
+            }
             
             setTimeout(() => {
                 document.body.classList.add('animation');
