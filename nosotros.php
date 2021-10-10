@@ -4,7 +4,7 @@
     <div class="row">
         <div class="content main-nosotros__content">
             <figure class='main-nosotros__figure'>
-                <img src="imgs/factory.png" alt="imagen de fabrica" class='main-nosotros__image'>
+                <img src="imgs/factory.jpg" alt="imagen de fabrica" class='main-nosotros__image'>
             </figure>
             <div class="main-nosotros__description">
                 <h1 class="main-nosotros__title">Nosotros</h1>
