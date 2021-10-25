@@ -1,23 +1,43 @@
 
 window.addEventListener('DOMContentLoaded', (event) => {
-
+    
     const productos = [{
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }, {
-        imagen: "imgs/item.jpg",
-    }];
+        imagen: "imgs/optica.jpg",
+    }, 
+    {
+        imagen: "imgs/friditas.jpg",
+    }, 
+    {
+        imagen: "imgs/alltudor.jpg",
+    }, 
+    {
+        imagen: "imgs/martina.jpg",
+    }, 
+    {
+        imagen: "imgs/polibyus.jpg",
+    }, 
+    {
+        imagen: "imgs/gestion.jpg",
+    }, 
+    {
+        imagen: "imgs/ultramovil.jpg",
+    }, 
+    {
+        imagen: "imgs/good-luck.jpg",
+    },
+    {
+        imagen: "imgs/ely.jpg",
+    },
+    {
+        imagen: "imgs/mini-play.jpg",
+    },
+    {
+        imagen: "imgs/sarin.jpg",
+    },
+    {
+        imagen: "imgs/varem.jpg",
+    },
+];
 
     let getProducts = () => {
 
@@ -74,6 +94,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     let mainNav = document.querySelector('.main-nav__sticky');
+    let mainNavLink = document.querySelectorAll('.main-navigation__link');
+
+    for (const link of mainNavLink) {
+        const href = link.getAttribute("href").split("#")[1];
+        console.log(href);
+        if (href !== "undefined ") {
+            link.addEventListener("click", clickHandler);
+        }
+    }
+
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+
+        scroll({
+            top: offsetTop - 190,
+            behavior: "smooth"
+        });
+    }
+    
 
     function onScrollActive() {
         document.body.classList.add('on-scroll');

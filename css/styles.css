@@ -188,7 +188,6 @@ and (max-width: 767px) {
     color: #000;
     font-weight: 600;
     transition: opacity .7s;
-    pointer-events: none;
 }
 .main-navigation__link:hover{
     opacity: .7;
@@ -339,6 +338,12 @@ and (max-width: 768px) {
 /* #endregion */
 
 /* #region Slider */
+.slider__image {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    object-position: center;
+}
 .tns-outer {
     position: relative;
 }
@@ -587,6 +592,7 @@ and (min-width: 768px) {
         text-align: center;
         font-size: 2.8rem;
         line-height: 1.3em;
+        margin-bottom: 4rem;
     }
 }
 @media only screen
