@@ -2,53 +2,21 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
     const productos = [{
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'bolsas'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'stickers'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'paquetes'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'paquetes'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'bolsas'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'stickers'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'bolsas'
     }, {
-        titulo: "Bolsa de papel 30x12x41",
-        unidades: "100 unidades",
-        precio: "4100$",
         imagen: "imgs/item.jpg",
-        categoria: 'paquetes'
     }];
 
     let getProducts = () => {
@@ -61,21 +29,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         for (let producto of Array.from(productos)) {
             template_product += `
-                <article class='item-categorias' data-producto='${producto.categoria}'>
+                <article class='item-categorias'>
                     <figure class='item-categorias__figure'>
-                        <img src="${producto.imagen}" alt="" class='item-categorias__image'>
-                        <figcaption class='item-categorias__figcaption'>
-                            <h3 class='item-categorias__title'>${producto.titulo}</h3>
-                            <h3 class='item-categorias__length'>${producto.unidades}</h3>
-                            <span class='item-categorias__price'>${producto.precio}</span>
-                        </figcaption>
+                        <img src="${producto.imagen}" alt="#" class='item-categorias__image'>
                     </figure>
                 </article>`;
         }
         return template_product;
-
     }
-
     function controllerProducts() {
         let productos = getProducts();
         let template = renderProductos(productos);
@@ -84,25 +45,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     window.location.pathname.indexOf('nosotros') >= 0 ? console.log('nosotros') : controllerProducts();
 
-    let bttnCategory = document.querySelectorAll('[data-category]');
-
-    // bttnCategory.forEach( bttn => {
-    //     bttn.addEventListener( 'click', (e) => {
-    //         e.preventDefault();
-    //         let categoryBttn = bttn.dataset.category;
-    //         controllerProducts();
-    //         filterProductos(categoryBttn);
-    //     });
-    // });
-    function filterProductos(categoryBttn) {
-        let productos = document.querySelectorAll('[data-producto]');
-        productos.forEach(producto => {
-            console.log(producto.dataset.producto !== categoryBttn);
-            if (producto.dataset.producto !== categoryBttn) {
-                producto.remove();
-            }
+    if(document.querySelector('[data-comp=marcas-slider]')){
+        console.log();
+        var sliderMarcas = tns({
+            "container": "[data-comp=marcas-slider]", 
+            "items": 6, 
+            "speed": 400, 
+            "gutter": 15, 
+            "responsive": { 0: { items: 2 }, 500: { items: 3 }, 940: { items: 5 }, 1400: { items: 5 } } 
         });
     }
+
 
     setTimeout(() => {
         document.body.classList.add('animation');
