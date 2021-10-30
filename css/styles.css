@@ -1,5 +1,8 @@
 /* font-family: 'Nunito', sans-serif; */
-
+.owl-carousel 
+{
+    touch-action: manipulation; 
+}
 .hidden-title {
     display: none;
 }
@@ -182,6 +185,60 @@ and (max-width: 767px) {
 .main-nav__logo {
     width: auto;
     height: 100%;
+        -webkit-animation: rotating 8s linear infinite;
+    -moz-animation: rotating 8s linear infinite;
+    -ms-animation: rotating 8s linear infinite;
+    -o-animation: rotating 8s linear infinite;
+    animation: rotating 8s linear infinite;
+    z-index: 1;
+}
+.main-nav__logo-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.main-nav__logo-container::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/logo-over.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 .main-navigation__link {
     text-transform: uppercase;
@@ -236,6 +293,7 @@ and (max-width: 767px) {
     top: 0;
     left: 0;
     content: '';
+    pointer-events: none;
 }
 .animation .loader,
 .animation .main-nav__figure::before {
@@ -540,6 +598,7 @@ and (max-width: 767px) {
         flex: 0 1 calc(50% - .75rem);
         margin-bottom: 1.5rem;
     }
+    
     .item-productos {
         margin-bottom: 1.5rem;
     }
@@ -547,8 +606,14 @@ and (max-width: 767px) {
         text-align: center;
         max-width: 10rem;
         font-size: 1.2rem;
-        line-height: 1.2em;
+        line-height: 1.25em;
         letter-spacing: .03em;
+    }
+    .item-productos--6 .item-productos__figcaption { 
+        height: 3rem;
+    }
+    .item-productos--6 .item-productos__title {
+        max-width: 100%;
     }
 }
 /* #endregion */
@@ -607,6 +672,7 @@ and (max-width: 767px) {
     .categorias__title {
         font-size: 2rem;
         line-height: 1.3em;
+        margin-bottom: 2rem;
     }
     .categorias__item {
         margin: 0 .75rem;

@@ -2,42 +2,42 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     
     const productos = [{
-        imagen: "imgs/optica.jpg",
-    }, 
-    {
-        imagen: "imgs/friditas.jpg",
-    }, 
-    {
-        imagen: "imgs/alltudor.jpg",
-    }, 
-    {
-        imagen: "imgs/martina.jpg",
-    }, 
-    {
-        imagen: "imgs/polibyus.jpg",
-    }, 
-    {
-        imagen: "imgs/gestion.jpg",
-    }, 
-    {
-        imagen: "imgs/ultramovil.jpg",
-    }, 
-    {
-        imagen: "imgs/good-luck.jpg",
-    },
-    {
-        imagen: "imgs/ely.jpg",
-    },
-    {
-        imagen: "imgs/mini-play.jpg",
-    },
-    {
-        imagen: "imgs/sarin.jpg",
-    },
-    {
-        imagen: "imgs/varem.jpg",
-    },
-];
+            imagen: "imgs/optica.jpg",
+        }, 
+        {
+            imagen: "imgs/friditas.jpg",
+        }, 
+        {
+            imagen: "imgs/alltudor.jpg",
+        }, 
+        {
+            imagen: "imgs/martina.jpg",
+        }, 
+        {
+            imagen: "imgs/polibyus.jpg",
+        }, 
+        {
+            imagen: "imgs/gestion.jpg",
+        }, 
+        {
+            imagen: "imgs/ultramovil.jpg",
+        }, 
+        {
+            imagen: "imgs/good-luck.jpg",
+        },
+        {
+            imagen: "imgs/ely.jpg",
+        },
+        {
+            imagen: "imgs/sarin.jpg",
+        },
+        {
+            imagen: "imgs/mini-play.jpg",
+        },
+        {
+            imagen: "imgs/varem.jpg",
+        },
+    ];
 
     let getProducts = () => {
 
@@ -63,8 +63,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let category_boxes = document.querySelector('.categorias__boxes');
         category_boxes.insertAdjacentHTML('afterbegin', template);
     }
+
     window.location.pathname.indexOf('nosotros') >= 0 ? console.log('nosotros') : controllerProducts();
 
+    // Sliders
     if(document.querySelector('[data-comp=marcas-slider]')){
         console.log();
         var sliderMarcas = tns({
@@ -72,16 +74,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             "items": 6, 
             "speed": 400, 
             "gutter": 15, 
+            'preventScrollOnTouch': true,
             "responsive": { 0: { items: 2 }, 500: { items: 3 }, 940: { items: 5 }, 1400: { items: 5 } } 
         });
     }
-
-
-    setTimeout(() => {
-        document.body.classList.add('animation');
-        document.body.classList.remove('hidden-scroll');
-    }, 1500);
-
     if(document.querySelector('[data-comp=main-slider]')){
         var slider = tns({
             "container": "[data-comp=main-slider]",
@@ -91,15 +87,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
             "speed": 400,
         });
     }
-
-
+    
+    // Scroll Hidden
+    setTimeout(() => {
+        document.body.classList.add('animation');
+        document.body.classList.remove('hidden-scroll');
+    }, 1500);
+    
+    // Main Nav
     let mainNav = document.querySelector('.main-nav__sticky');
     let mainNavLink = document.querySelectorAll('.main-navigation__link');
 
     for (const link of mainNavLink) {
         const href = link.getAttribute("href").split("#")[1];
-        console.log(href);
-        if (href !== "undefined ") {
+        if ( typeof href !== "undefined" ) {
             link.addEventListener("click", clickHandler);
         }
     }
