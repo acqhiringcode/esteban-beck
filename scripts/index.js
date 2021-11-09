@@ -1,42 +1,44 @@
 
 window.addEventListener('DOMContentLoaded', (event) => {
     
-    const productos = [{
-            imagen: "imgs/optica.jpg",
-        }, 
-        {
-            imagen: "imgs/friditas.jpg",
-        }, 
-        {
-            imagen: "imgs/alltudor.jpg",
-        }, 
+    const productos = [
         {
             imagen: "imgs/martina.jpg",
         }, 
         {
-            imagen: "imgs/polibyus.jpg",
-        }, 
-        {
-            imagen: "imgs/gestion.jpg",
-        }, 
-        {
-            imagen: "imgs/ultramovil.jpg",
-        }, 
-        {
-            imagen: "imgs/good-luck.jpg",
+            imagen: "imgs/varem.jpg",
         },
         {
-            imagen: "imgs/ely.jpg",
-        },
-        {
-            imagen: "imgs/sarin.jpg",
+            imagen: "imgs/friditas.jpg",
         },
         {
             imagen: "imgs/mini-play.jpg",
         },
         {
-            imagen: "imgs/varem.jpg",
+            imagen: "imgs/alltudor.jpg",
+        }, 
+        {
+            imagen: "imgs/ely.jpg",
         },
+        {
+            imagen: "imgs/optica.jpg",
+            imagen: "imgs/optica.jpg",
+        }, 
+        {
+            imagen: "imgs/sarin.jpg",
+        },
+        {
+            imagen: "imgs/polibyus.jpg",
+        }, 
+        {
+            imagen: "imgs/good-luck.jpg",
+        },
+        {
+            imagen: "imgs/gestion.jpg",
+        },
+        {
+            imagen: "imgs/ultramovil.jpg",
+        }
     ];
 
     let getProducts = () => {
@@ -64,7 +66,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         category_boxes.insertAdjacentHTML('afterbegin', template);
     }
 
-    window.location.pathname.indexOf('nosotros') >= 0 ? console.log('nosotros') : controllerProducts();
+    window.location.pathname == '/esteban-beck/index.php' || window.location.pathname == '/esteban-beck/clientes.php' ? controllerProducts() : console.log('noIndex');
 
     // Sliders
     if(document.querySelector('[data-comp=marcas-slider]')){
