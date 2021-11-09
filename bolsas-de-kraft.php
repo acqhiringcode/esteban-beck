@@ -31,9 +31,6 @@
              <figure class="main-pictures__figure">
                 <img class="main-picture__image" src="imgs/kraft/image-1.jpg" alt="#">
             </figure>
-             <figure class="main-pictures__figure">
-                <img class="main-picture__image" src="imgs/kraft/image-5.jpg" alt="#">
-            </figure>
         </div>
     </div>
 </main>

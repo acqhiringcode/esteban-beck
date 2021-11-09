@@ -31,7 +31,7 @@
                     </a>
                 </article>
                 <article class='item-productos item-productos--4'>
-                    <a href="single.php" class="item-productos__link">
+                    <a href="bolsas-plasticas.php" class="item-productos__link">
                         <figure class='item-productos__figure'>
                             <img src="imgs/bolsas-plasticas.jpg" class='item-productos__image' alt="">
                             <figcaption class='item-productos__figcaption'>
@@ -41,7 +41,7 @@
                     </a>
                 </article>
                 <article class='item-productos item-productos--4'>
-                    <a href="single.php" class="item-productos__link">
+                    <a href="stickers-cierra-bolsas.php" class="item-productos__link">
                         <figure class='item-productos__figure'>
                             <img src="imgs/cierra-bolsas.jpg" class='item-productos__image' alt="">
                             <figcaption class='item-productos__figcaption'>

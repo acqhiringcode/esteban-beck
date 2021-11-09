@@ -10,7 +10,7 @@
             <figure class='slider__figure'>
                 <img class='slider__image' src="imgs/slide-2.jpg" alt="#">
             </figure>
-            <figure class='slider__figure'>  
+            <figure class='slider__figure'>
                 <img class='slider__image' src="imgs/slide-5.jpg" alt="#">
             </figure>
             <figure class='slider__figure'>
@@ -19,7 +19,7 @@
             <figure class='slider__figure'>
                 <img class='slider__image' src="imgs/slide-6.jpg" alt="#">
             </figure>
-            <figure class='slider__figure'>  
+            <figure class='slider__figure'>
                 <img class='slider__image' src="imgs/slide-1.jpg" alt="#">
             </figure>
         </div>
@@ -52,7 +52,7 @@
                     </a>
                 </article>
                 <article class='item-productos item-productos--4'>
-                    <a href="#" class="item-productos__link">
+                    <a href="bolsas-plasticas.php" class="item-productos__link">
                         <figure class='item-productos__figure'>
                             <img src="imgs/bolsas-plasticas.jpg" class='item-productos__image' alt="">
                             <figcaption class='item-productos__figcaption'>
@@ -62,7 +62,7 @@
                     </a>
                 </article>
                 <article class='item-productos item-productos--4'>
-                    <a href="#" class="item-productos__link">
+                    <a href="stickers-cierra-bolsas.php" class="item-productos__link">
                         <figure class='item-productos__figure'>
                             <img src="imgs/cierra-bolsas.jpg" class='item-productos__image' alt="">
                             <figcaption class='item-productos__figcaption'>
@@ -85,14 +85,14 @@
         </div>
     </section>
 
-    <aside class="container banner" >
+    <aside class="container banner">
         <div class="row">
             <figure class="banner__figure">
-                <img src="imgs/monios-bg.jpg" alt="#"  class="banner__image">
+                <img src="imgs/monios-bg.jpg" alt="#" class="banner__image">
             </figure>
             <div class="content">
                 <h3 class="banner__title">MOÑOS</h3>
-                    <p class="banner__text">Gran variedad de colores</p>
+                <p class="banner__text">Gran variedad de colores</p>
             </div>
         </div>
     </aside>
