@@ -12,10 +12,9 @@
             </figure>
             <div class="main-nosotros__description">
                 <h1 class="main-nosotros__title">Nosotros</h1>
-                <p class="main-nosotros__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque aliquam, molestiae vel sunt et totam commodi impedit quibusdam, iste, officia vitae quisquam itaque magni facere saepe similique perspiciatis voluptatibus,
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque aliquam, molestiae vel sunt et totam commodi. Impedit quibusdam, iste, officia vitae quisquam itaque magni facere saepe similique perspiciatis voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque aliquam, molestiae vel sunt et totam commodi
-                    impedit quibusdam, iste, officia vitae quisquam itaque magni facere saepe similique perspiciatis voluptatibus,
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque aliquam, molestiae vel sunt et totam commodi. Impedit quibusdam, iste, officia vitae quisquam itaque magni facere saepe similique perspiciatis voluptatibus.</p>
+                <p class="main-nosotros__text">
+                    Mi nombre es Esteban Beck, soy una persona dedicada a la producción y comercialización de insumos para tu local. Hace mas de 10 años que trabajo en la calidad, la responsanbilidad y la mejora contínua.
+                </p>
             </div>
         </div>
     </div>

@@ -51,7 +51,7 @@
                     </a>
                 </article>
                 <article class='item-productos item-productos--4'>
-                    <a href="single.php" class="item-productos__link">
+                    <a href="etiquetas-para-ropa.php" class="item-productos__link">
                         <figure class='item-productos__figure'>
                             <img src="imgs/etiqueta.jpg" class='item-productos__image' alt="">
                             <figcaption class='item-productos__figcaption'>

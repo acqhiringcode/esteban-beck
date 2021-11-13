@@ -38,4 +38,6 @@
     </div>
 </main>
 
+<?php include './includes/nav-products.php' ?>
+
 <?php include './includes/main-footer.php' ?>

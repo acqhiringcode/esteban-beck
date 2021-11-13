@@ -7,30 +7,30 @@
 <main class="container main-pictures">
     <div class="row">
         <div class="content content-12">
-            <h2 class="main-pictures__title">Bolsas de Kraft</h2>
+            <h2 class="main-pictures__title">Etiquetas para Ropa</h2>
         </div>
     </div>
     <div class="row">
         <div class="content content-3">
             <figure class="main-pictures__figure">
-                <img class="main-picture__image" src="imgs/kraft/image-5.jpg" alt="#">
+                <img class="main-picture__image" src="imgs/etiquetas/image-1.jpg" alt="#">
             </figure>
             <figure class="main-pictures__figure">
-                <img class="main-picture__image" src="imgs/kraft/image-2.jpg" alt="#">
+                <img class="main-picture__image" src="imgs/etiquetas/image-2.jpg" alt="#">
             </figure>
         </div>
         <div class="content content-3">
              <figure class="main-pictures__figure">
-                 <img class="main-picture__image" src="imgs/kraft/image-4.jpg" alt="#">    
-            </figure>  
-             <figure class="main-pictures__figure">
-                 <img class="main-picture__image" src="imgs/kraft/image-3.jpg" alt="#">    
-            </figure>  
+                 <img class="main-picture__image" src="imgs/etiquetas/image-5.jpg" alt="#">    
+            </figure>   
         </div>
         <div class="content content-3">
              <figure class="main-pictures__figure">
-                <img class="main-picture__image" src="imgs/kraft/image-1.jpg" alt="#">
+                <img class="main-picture__image" src="imgs/etiquetas/image-3.jpg" alt="#">
             </figure>
+            <figure class="main-pictures__figure">
+                 <img class="main-picture__image" src="imgs/etiquetas/image-4.jpg" alt="#">    
+            </figure> 
         </div>
     </div>
 </main>
