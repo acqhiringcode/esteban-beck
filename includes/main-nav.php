@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
     <title><?php echo $title ?></title>
-    <meta name="description" content="<?php echo $description ?>">
+	<meta name="description" content="<?php echo $description ?>" />
+	<link rel="canonical" href="https://www.bolsasestebanbeck.com.ar" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Bolsas de carton, kraft, plastico." />
+	<meta property="og:description" content="Bolsas de carton, kraft, plastico." />
+	<meta property="og:url" content="https://www.bolsasestebanbeck.com.ar" />
+	<meta property="og:site_name" content="Bolsas Esteban Beck" />
+	<meta property="article:publisher" content="https://www.facebook.com/Bolsas-Esteban-Beck-303442049673831" />
+	<meta property="article:modified_time" content="2021-08-05T23:14:07+00:00" />
+	<meta property="og:image" content="https://www.bolsasestebanbeck.com.ar/imgs/bolsas-de-carton.jpg" />
+	<meta property="og:image:width" content="643" />
+	<meta property="og:image:height" content="377" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Bolsas de carton, kraft, plastico." />
+	<meta name="twitter:description" content="Bolsas de carton, kraft, plastico." />
+	<meta name="twitter:image" content="https://www.bolsasestebanbeck.com.ar/imgs/bolsas-de-carton.jpg" />
 
-    <!-- Metas OG -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="./imgs/bolsas-de-carton.jpg">
-    <meta name="twitter:site" content="@BolsasEstebanBeck">
-    <meta name="twitter:title" content="Bolsas de carton, kraft, plastico.">
-    <meta name="twitter:description" content="Bolsas de carton, kraft, plastico.">
-    <meta name="twitter:creator" content="@BolsasEstebanBeck">
-    <meta name="twitter:domain" content="bolsasestebanbeck.com.ar">
-    <meta property="og:image" content="./imgs/bolsas-de-carton.jpg" />
-    <meta property="og:url" content="https://www.bolsasestebanbeck.com.ar" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bolsas de carton, kraft, plastico." />
-    <meta property="og:description" content="Bolsas de carton, kraft, plastico." />
+	<!-- / Yoast SEO plugin. -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
